@@ -104,7 +104,7 @@ app.post("/", (req, res) => {
 
     if(listName === "Today"){
         item.save();
-        res.redirect("/")
+        res.redirect("/");
     } else {
         List.findOne({name: listName}).then(function(foundList){
             foundList.items.push(item);
